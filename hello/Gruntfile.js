@@ -20,8 +20,10 @@ module.exports = function (grunt) {
             main: {
               files: [
                 {expand: true, cwd: 'build/', src: ['**'], dest: 'app/scripts', flatten: true,},
-                {expand: true, cwd: 'node_modules/@webcomponents/webcomponentsjs', src: ['webcomponents-bundle.js', 'custom-elements-es5-adapter.js'], dest: 'app/scripts', flatten: true,},
-                {expand: true, cwd: 'node_modules/@webcomponents/html-imports', src: ['html-imports.min.js'], dest: 'app/scripts', flatten: true,}
+                {expand: true, cwd: 'node_modules/@webcomponents/webcomponentsjs', src: ['webcomponents-bundle.js', 'webcomponents-bundle.js.map', 'custom-elements-es5-adapter.js'], dest: 'app/scripts', flatten: true,},
+                {expand: true, cwd: 'node_modules/@webcomponents/html-imports', src: ['html-imports.min.js', 'html-imports.min.js.map'], dest: 'app/scripts', flatten: true,},
+                {expand: true, cwd: 'node_modules/@webcomponents/template', src: ['template.js'], dest: 'app/scripts', flatten: true,},
+                {expand: true, cwd: 'node_modules/@webcomponents/webcomponents-platform', src: ['webcomponents-platform.js'], dest: 'app/scripts', flatten: true,},
               ]
             }
         },

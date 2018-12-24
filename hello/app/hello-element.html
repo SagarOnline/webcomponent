@@ -1,7 +1,8 @@
 <html>
 <head>
         <template id="hello-template">
-                <script  >
+                <script type="text/javascript">
+                    debugger;
                     console.log("Inline script in template");
                     </script>
                 <p>Hello, This is an example of custom element loaded through 'html link import' tag. <br/>
@@ -9,7 +10,7 @@
               </template>
               <script  src="scripts/webcomponents-bundle.js"></script>
               <script  src="scripts/custom-elements-es5-adapter.js"></script>
-                <script  src="scripts/hello.js"></script>
+              <script  src="scripts/hello.js"></script>
         
 </head>
 <body>
