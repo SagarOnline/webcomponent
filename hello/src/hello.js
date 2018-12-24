@@ -37,4 +37,4 @@ class HelloElement extends HTMLElement{
       };
 }
 
-customElements.define('hello-element', HelloElement);
+customElements.define('app-loader', HelloElement);
