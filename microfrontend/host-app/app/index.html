@@ -6,12 +6,13 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+  <script src="html-imports.min.js"></script>
 </head>
 <body>
-  <div id="app-container">
-
+  <div id="angular-app-container">
+    <!-- angular application microfrontend will be loaded inside this div tag -->
   </div>
+  <!-- link import tag imports the microfrontend-->
   <link rel="import" href="http://localhost:9080/app.html" >
 </body>
 </html>
