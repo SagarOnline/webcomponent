@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         copy: {
             main: {
               files: [
-                {expand: true, cwd: 'build/', src: ['index.html', 'favicon.ico'], dest: 'hello-app', flatten: true,},              ]
+                {expand: true, cwd: 'node_modules/@webcomponents/webcomponentsjs/', src: ['custom-elements-es5-adapter.js'], dest: 'hello-app', flatten: true,},              ]
             }
         },
 
@@ -29,9 +29,9 @@ module.exports = function (grunt) {
    
 
     //load the copy module
-    //grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
     //register the build task
-    grunt.registerTask('build', ['concat']);
+    grunt.registerTask('build', ['concat:dist', 'copy:main']);
 
 };
